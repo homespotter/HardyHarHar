@@ -1,3 +1,2 @@
-include ':Hardyharhar'
-include ':app'
+include ':hardyharhar'
 rootProject.name = "HardyHarHar"
