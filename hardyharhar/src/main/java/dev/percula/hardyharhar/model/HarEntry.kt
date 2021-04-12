@@ -12,11 +12,11 @@ import java.util.*
  */
 @Serializable
 data class HarEntry(
-    @SerialName("pageref") val pageref: String,
+    @SerialName("pageref") val pageref: String? = null,
     @SerialName("startedDateTime") @Serializable(with = DateSerializer::class) val startedDateTime: Date?,
     @SerialName("time") val time: Long,
     @SerialName("request") val request: HarRequest,
-    @SerialName("response") val response: HarResponse ,
+    @SerialName("response") val response: HarResponse,
     @SerialName("cache") val cache: HarCache? = null,
     @SerialName("timings") val timings: HarTimings? = null,
     @SerialName("serverIPAddress") val serverIPAddress: String? = null,

@@ -16,7 +16,7 @@ data class HarResponse(
     @SerialName("cookies") val cookies: List<HarCookie> = emptyList(),
     @SerialName("headers") val headers: List<HarHeader> = emptyList(),
     @SerialName("content") val content: HarContent?,
-    @SerialName("redirectURL") val redirectURL: String,
+    @SerialName("redirectURL") val redirectURL: String? = null,
     @SerialName("headersSize") val headersSize: Long,
     @SerialName("bodySize") val bodySize: Long,
     @SerialName("comment") val comment: String?
