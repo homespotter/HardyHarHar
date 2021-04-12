@@ -10,15 +10,15 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 data class HarRequest(
-    @SerialName("headersSize") val headersSize: Long,
     @SerialName("method") val method: String,
     @SerialName("url") val url: String,
     @SerialName("httpVersion") val httpVersion: String,
     @SerialName("cookies") val cookies: List<HarCookie> = emptyList(),
     @SerialName("headers") val headers: List<HarHeader> = emptyList(),
+    @SerialName("headersSize") val headersSize: Long = headers.size.toLong(),
     @SerialName("queryString") val queryString: List<HarQueryString> = emptyList(),
-    @SerialName("postData") val postData: HarPostData?,
-    @SerialName("bodySize") val bodySize: Long,
+    @SerialName("postData") val postData: HarPostData? = null,
+    @SerialName("bodySize") val bodySize: Long = 0L,
     @SerialName("comment") val comment: String? = null
 ) {
     override fun toString(): String {

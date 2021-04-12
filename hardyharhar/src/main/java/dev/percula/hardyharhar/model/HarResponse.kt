@@ -15,11 +15,11 @@ data class HarResponse(
     @SerialName("httpVersion") val httpVersion: String,
     @SerialName("cookies") val cookies: List<HarCookie> = emptyList(),
     @SerialName("headers") val headers: List<HarHeader> = emptyList(),
-    @SerialName("content") val content: HarContent?,
+    @SerialName("headersSize") val headersSize: Long = headers.size.toLong(),
+    @SerialName("content") val content: HarContent? = null,
     @SerialName("redirectURL") val redirectURL: String? = null,
-    @SerialName("headersSize") val headersSize: Long,
-    @SerialName("bodySize") val bodySize: Long,
-    @SerialName("comment") val comment: String?
+    @SerialName("bodySize") val bodySize: Long = 0L,
+    @SerialName("comment") val comment: String? = null
 ) {
     override fun toString(): String {
         return "HarResponse [content = $content, headers = $headers, bodySize = $bodySize, httpVersion = $httpVersion, status = $status, redirectURL = $redirectURL, statusText = $statusText, comment = $comment, cookies = $cookies, headersSize = $headersSize]"
