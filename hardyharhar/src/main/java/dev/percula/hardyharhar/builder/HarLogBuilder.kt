@@ -5,7 +5,10 @@ import java.util.*
 
 class HarLogBuilder {
     private var version = "1.2"
-    private var creator: HarCreator? = null
+    private var creator: HarCreator = HarCreator(
+        name = "HardyHarHar",
+        version = "1.0",
+    )
     private var browser: HarBrowser? = null
     private var pages: List<HarPage>? = null
     private var entries: MutableList<HarEntry> = ArrayList<HarEntry>()
@@ -15,7 +18,7 @@ class HarLogBuilder {
         return this
     }
 
-    fun withCreator(creator: HarCreator?): HarLogBuilder {
+    fun withCreator(creator: HarCreator): HarLogBuilder {
         this.creator = creator
         return this
     }

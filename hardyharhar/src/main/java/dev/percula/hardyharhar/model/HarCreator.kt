@@ -11,7 +11,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class HarCreator(
     @SerialName("name") val name: String,
-    @SerialName("comment") val comment: String?,
+    @SerialName("comment") val comment: String? = null,
     @SerialName("version") val version: String
 ) {
     override fun toString(): String {

@@ -11,11 +11,14 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class HarLog(
     @SerialName("version") val version: String = "1.2",
-    @SerialName("creator") val creator: HarCreator?,
-    @SerialName("browser") val browser: HarBrowser?,
+    @SerialName("creator") val creator: HarCreator = HarCreator(
+        name = "HardyHarHar",
+        version = "1.0",
+    ),
+    @SerialName("browser") val browser: HarBrowser? = null,
     @SerialName("pages") val pages: List<HarPage> = mutableListOf(),
     @SerialName("entries") val entries: List<HarEntry> = mutableListOf(),
-    @SerialName("comment") val comment: String?
+    @SerialName("comment") val comment: String? = null
 ) {
 
     override fun toString(): String {
