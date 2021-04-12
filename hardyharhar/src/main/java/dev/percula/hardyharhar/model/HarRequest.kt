@@ -14,12 +14,12 @@ data class HarRequest(
     @SerialName("method") val method: String,
     @SerialName("url") val url: String,
     @SerialName("httpVersion") val httpVersion: String,
-    @SerialName("cookies") val cookies: List<HarCookie>,
-    @SerialName("headers") val headers: List<HarHeader>,
-    @SerialName("queryString") val queryString: List<HarQueryString>,
+    @SerialName("cookies") val cookies: List<HarCookie> = emptyList(),
+    @SerialName("headers") val headers: List<HarHeader> = emptyList(),
+    @SerialName("queryString") val queryString: List<HarQueryString> = emptyList(),
     @SerialName("postData") val postData: HarPostData?,
     @SerialName("bodySize") val bodySize: Long,
-    @SerialName("comment") val comment: String?
+    @SerialName("comment") val comment: String? = null
 ) {
     override fun toString(): String {
         return "HarRequest [headers = $headers, queryString = $queryString, bodySize = $bodySize, postData = $postData, httpVersion = $httpVersion, method = $method, comment = $comment, cookies = $cookies, url = $url, headersSize = $headersSize]"
