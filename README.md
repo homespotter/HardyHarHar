@@ -34,3 +34,7 @@ fun writeHarFile() {
     DefaultHarWriter().writeHarLogToFile(HarLog(entries = entries), file)
 }
 ```
+
+## Credits
+
+HardyHarHar is based on [Har-Java](https://github.com/SmartBear/har-java)
