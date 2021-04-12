@@ -15,7 +15,7 @@ data class HarRequest(
     @SerialName("httpVersion") val httpVersion: String,
     @SerialName("cookies") val cookies: List<HarCookie> = emptyList(),
     @SerialName("headers") val headers: List<HarHeader> = emptyList(),
-    @SerialName("headersSize") val headersSize: Long = headers.size.toLong(),
+    @SerialName("headersSize") val headersSize: Long = 0L,
     @SerialName("queryString") val queryString: List<HarQueryString> = emptyList(),
     @SerialName("postData") val postData: HarPostData? = null,
     @SerialName("bodySize") val bodySize: Long = 0L,
