@@ -35,6 +35,20 @@ fun writeHarFile() {
 }
 ```
 
+## Proguard
+You may need to add the following to your proguard-rules.pro
+```
+-keepattributes *Annotation*, InnerClasses
+-dontnote kotlinx.serialization.SerializationKt
+-keep,includedescriptorclasses class dev.percula.hardyharhar.**$$serializer { *; }
+-keepclassmembers class dev.percula.hardyharhar.** {
+    *** Companion;
+}
+-keepclasseswithmembers class dev.percula.hardyharhar.** {
+    kotlinx.serialization.KSerializer serializer(...);
+}
+```
+
 ## Credits
 
 HardyHarHar is based on [Har-Java](https://github.com/SmartBear/har-java)
