@@ -2,7 +2,10 @@ plugins {
     `java-library`
     kotlin("jvm") version "1.4.30"
     kotlin("plugin.serialization") version "1.4.30"
+    maven
 }
+
+group = "com.github.homespotter"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_11
