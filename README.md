@@ -1,8 +1,13 @@
-[![](https://jitpack.io/v/percula/hardyharhar.svg)](https://jitpack.io/#percula/hardyharhar)
+[![](https://jitpack.io/v/homespotter/hardyharhar.svg)](https://jitpack.io/#homespotter/hardyharhar)
 
 ## HardyHarHar
 
 A Kotlin library to create [HAR](http://www.softwareishard.com/blog/har-12-spec/) network log files.
+
+## Install
+```gradle
+implementation 'com.github.homespotter:hardyharhar:LATEST_RELEASE'
+```
 
 ## Usage
 ```kotlin
